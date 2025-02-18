@@ -5,76 +5,38 @@ import AppHeader from "./ui/header/app-header";
 
 export default function Home() {
   return (
-    <SidebarProvider>
-      {/* Main Layout Container */}
       <div className="flex flex-col min-h-screen">
-        {/* Header */}
-        <AppHeader>
-          <SidebarTrigger />
+        {/* Header (Full Width, but considers Sidebar) */}
+        <AppHeader className="w-full">
+          {/* <SidebarTrigger /> */}
         </AppHeader>
 
-        {/* Content Area */}
         <div className="flex flex-1">
-          {/* Sidebar */}
-          <AppSidebar />
+          {/* Sidebar (Left) */}
+          {/* <AppSidebar /> */}
 
-          {/* Main Content */}
-          <main className="flex-1 p-8 overflow-y-auto">
-            <div className="max-w-7xl mx-auto">
-              {/* Your main content goes here */}
+          {/* Main Content Section */}
+          <main className="flex-1 flex flex-col p-8">
+            {/* Some Cards or Content */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {/* Sample Cards */}
+              <div className="p-6 bg-gray-100 dark:bg-gray-800 rounded-lg shadow">
+                Card 1
+              </div>
+              <div className="p-6 bg-gray-100 dark:bg-gray-800 rounded-lg shadow">
+                Card 2
+              </div>
+              <div className="p-6 bg-gray-100 dark:bg-gray-800 rounded-lg shadow">
+                Card 3
+              </div>
             </div>
           </main>
         </div>
 
         {/* Footer */}
-        <footer className="flex gap-6 flex-wrap items-center justify-center p-4 border-t">
-          <a
-            className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              aria-hidden
-              src="/file.svg"
-              alt="File icon"
-              width={16}
-              height={16}
-            />
-            Learn
-          </a>
-          <a
-            className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              aria-hidden
-              src="/window.svg"
-              alt="Window icon"
-              width={16}
-              height={16}
-            />
-            Examples
-          </a>
-          <a
-            className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-            href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              aria-hidden
-              src="/globe.svg"
-              alt="Globe icon"
-              width={16}
-              height={16}
-            />
-            Go to nextjs.org →
-          </a>
+        <footer className="w-full p-4 bg-gray-50 dark:bg-gray-900 text-center">
+          Footer Content
         </footer>
       </div>
-    </SidebarProvider>
   );
 }
