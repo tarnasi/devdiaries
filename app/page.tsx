@@ -7,6 +7,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import Image from 'next/image'
 
 export default function Home() {
   return (
@@ -23,10 +24,12 @@ export default function Home() {
           {/* Card 1 */}
           <Card>
             <CardHeader>
-              <img
-                src="https://picsum.photos/200"
+              <Image
+                src="https://picsum.photos/1000"
                 alt="Card Image"
                 className="w-full h-48 object-cover"
+                width={200}
+                height={200}
               />
             </CardHeader>
             <CardContent>
@@ -46,10 +49,12 @@ export default function Home() {
           </Card>
           <Card>
             <CardHeader>
-              <img
-                src="https://picsum.photos/300"
+            <Image
+                src="https://picsum.photos/700"
                 alt="Card Image"
                 className="w-full h-48 object-cover"
+                width={200}
+                height={200}
               />
             </CardHeader>
             <CardContent>
@@ -69,10 +74,12 @@ export default function Home() {
           </Card>
           <Card>
             <CardHeader>
-              <img
-                src="https://picsum.photos/900"
+            <Image
+                src="https://picsum.photos/800"
                 alt="Card Image"
                 className="w-full h-48 object-cover"
+                width={200}
+                height={200}
               />
             </CardHeader>
             <CardContent>
