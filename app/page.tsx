@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Header (Full Width, but considers Sidebar) */}
-      <AppHeader className="w-full"></AppHeader>
+      <AppHeader></AppHeader>
 
       <div className="flex flex-1">
         {/* Sidebar (Left) */}
