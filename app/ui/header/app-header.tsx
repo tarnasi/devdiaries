@@ -15,16 +15,11 @@ import {
 import { Settings } from "lucide-react";
 import Image from "next/image";
 
-export default function AppHeader({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function AppHeader() {
   return (
     <header className="flex items-center px-6 py-3 bg-background border-b shadow-sm dark:border-b-gray-800">
       {/* Left Section: Sidebar Trigger & Logo */}
       <div className="flex items-center gap-4">
-        {children}
         <Avatar className="h-16 w-16">
           <AvatarImage src="/path-to-your-logo.png" alt="Logo" />
           <AvatarFallback className="bg-gray-200 dark:bg-gray-700">
