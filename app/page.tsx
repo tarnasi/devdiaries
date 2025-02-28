@@ -1,111 +1,39 @@
-import AppHeader from "./ui/header/app-header";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import Link from 'next/link'
 import Image from 'next/image'
 
+import HomePageImage from '@/public/images/home/main1.jpg'
+
 export default function Home() {
+
   return (
-    <div className="flex flex-col min-h-screen">
-      {/* Header (Full Width, but considers Sidebar) */}
-      <AppHeader></AppHeader>
-
-      <div className="flex flex-1">
-        {/* Sidebar (Left) */}
-        {/* <AppSidebar /> */}
-
-        {/* Main Content Section */}
-        <div className="main-content flex">
-          {/* Card 1 */}
-          <Card>
-            <CardHeader>
-              <Image
-                src="https://picsum.photos/1000"
-                alt="Card Image"
-                className="w-full h-48 object-cover"
-                width={200}
-                height={200}
-              />
-            </CardHeader>
-            <CardContent>
-              <CardTitle className="text-xl font-semibold">
-                Card Title
-              </CardTitle>
-              <CardDescription className="text-sm text-gray-500">
-                This is a brief description or summary of the card content. It
-                gives a short overview.
-              </CardDescription>
-            </CardContent>
-            <CardFooter>
-              <a href="your-link" className="text-blue-600 hover:text-blue-800">
-                Read More
-              </a>
-            </CardFooter>
-          </Card>
-          <Card>
-            <CardHeader>
-            <Image
-                src="https://picsum.photos/700"
-                alt="Card Image"
-                className="w-full h-48 object-cover"
-                width={200}
-                height={200}
-              />
-            </CardHeader>
-            <CardContent>
-              <CardTitle className="text-xl font-semibold">
-                Card Title
-              </CardTitle>
-              <CardDescription className="text-sm text-gray-500">
-                This is a brief description or summary of the card content. It
-                gives a short overview.
-              </CardDescription>
-            </CardContent>
-            <CardFooter>
-              <a href="your-link" className="text-blue-600 hover:text-blue-800">
-                Read More
-              </a>
-            </CardFooter>
-          </Card>
-          <Card>
-            <CardHeader>
-            <Image
-                src="https://picsum.photos/800"
-                alt="Card Image"
-                className="w-full h-48 object-cover"
-                width={200}
-                height={200}
-              />
-            </CardHeader>
-            <CardContent>
-              <CardTitle className="text-xl font-semibold">
-                Card Title
-              </CardTitle>
-              <CardDescription className="text-sm text-gray-500">
-                This is a brief description or summary of the card content. It
-                gives a short overview.
-              </CardDescription>
-            </CardContent>
-            <CardFooter>
-              <a href="your-link" className="text-blue-600 hover:text-blue-800">
-                Read More
-              </a>
-            </CardFooter>
-          </Card>
-
-          {/* Additional cards can go here */}
-        </div>
+    <div className="flex min-h-screen items-center justify-evenly">
+      <div className="bg-amber-700 w-full min-h-screen">
+        <Image
+          src={HomePageImage}
+          width={0}
+          height={0}
+          className='w-full min-h-screen object-cover'
+          alt='Main Picture of Home Page' />
       </div>
-
-      {/* Footer */}
-      <footer className="w-full p-2 text-center">
-        <span className="text-xs">@Shahriyar Tarnasi - 2025</span>
-      </footer>
+      <div className="bg-amber-900 w-full min-h-screen">
+        <ul className="flex flex-col space-y-10 w-full min-h-screen items-center justify-center text-white">
+          <li className="p-2">
+            <Link href={'/blockchain'} className='text-3xl underline'>My Resume</Link>
+          </li>
+          <li className="p-2">
+            <Link href={'/projects'} className='text-3xl underline'>Projects</Link>
+          </li>
+          <li className="p-2">
+            <Link href={'/crypto'} className='text-3xl underline'>Crypto and Market</Link>
+          </li>
+          <li className="p-2">
+            <Link href={'/blockchain'} className='text-3xl underline'>Blockchain and Smart Contract</Link>
+          </li>
+          <li className="p-2">
+            <Link href={'/contact'} className='text-3xl underline'>Contact me</Link>
+          </li>
+        </ul>
+      </div>
     </div>
   );
 }
