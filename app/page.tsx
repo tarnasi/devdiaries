@@ -5,34 +5,34 @@ import HomePageImage from '@/public/images/home/main1.jpg'
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-evenly">
+    <div className="grid grid-cols-1 md:grid-cols-2 h-screen">
       {/* Image Section (Hidden on Mobile) */}
-      <div className="bg-amber-700 w-full min-h-screen hidden md:block">
+      <div className="hidden md:block relative h-full w-full">
         <Image
           src={HomePageImage}
-          width={0}
-          height={0}
-          className='w-full min-h-screen object-cover'
-          alt='Main Picture of Home Page' />
+          alt="Main Picture of Home Page"
+          layout="fill"
+          objectFit="cover"
+        />
       </div>
 
-      {/* Links Section (Always Visible) */}
-      <div className="bg-amber-900 w-full min-h-screen">
-        <ul className="flex flex-col space-y-10 w-full min-h-screen items-center justify-center text-white px-24">
-          <li className="p-2 border-b-2 w-full text-center">
-            <Link href={'/blockchain'} className='text-3xl'>My Resume</Link>
+      {/* Links Section */}
+      <div className="bg-amber-900 flex flex-col justify-center items-center h-full text-white">
+        <ul className="space-y-10 w-3/4 text-center">
+          <li className="p-2 border-b-2">
+            <Link href="/blockchain" className="text-3xl">My Resume</Link>
           </li>
-          <li className="p-2 border-b-2 w-full text-center">
-            <Link href={'/projects'} className='text-3xl'>Projects</Link>
+          <li className="p-2 border-b-2">
+            <Link href="/projects" className="text-3xl">Projects</Link>
           </li>
-          <li className="p-2 border-b-2 w-full text-center">
-            <Link href={'/crypto'} className='text-3xl'>Crypto and Market</Link>
+          <li className="p-2 border-b-2">
+            <Link href="/crypto" className="text-3xl">Crypto and Market</Link>
           </li>
-          <li className="p-2 border-b-2 w-full text-center">
-            <Link href={'/blockchain'} className='text-3xl'>Blockchain and Smart Contract</Link>
+          <li className="p-2 border-b-2">
+            <Link href="/blockchain" className="text-3xl">Blockchain and Smart Contract</Link>
           </li>
-          <li className="p-2 border-b-2 w-full text-center">
-            <Link href={'/contact'} className='text-3xl'>Contact me</Link>
+          <li className="p-2 border-b-2">
+            <Link href="/contact" className="text-3xl">Contact me</Link>
           </li>
         </ul>
       </div>
