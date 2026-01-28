@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@theme {
+    --color-app:white;
+    --color-app-soft:#f0f0f0;
+    --text-app:black;
+    --text-app-soft:#626262;
+}
+
+a {
+    color: inherit;
+}

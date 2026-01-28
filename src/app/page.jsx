@@ -1,5 +1,9 @@
-import styles from "./homepage.module.css";
+import Footer from "@/components/footer/Footer";
+import Navbar from "@/components/navbar/Navbar";
 
 export default function Home() {
-  return <div>Hello</div>;
+  return <div>
+    <Navbar />
+    <Footer />
+  </div>
 }
