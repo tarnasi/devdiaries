@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
 @import "tailwindcss";
 
 :root {
@@ -14,6 +15,8 @@
   --color-background-dark: #1F2937;
   --color-background-white: #F9FAFB;
   --color-accent: #3B82F6;
+
+  --font-caveat: "Caveat", cursive;
 }
 
 @media (prefers-color-scheme: dark) {
